@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'android';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+/*o import e font-face são fontes que estou importando de terceiros
+OBS: Em caso de duvidas rever aulas de tipagem e fontes*/
+
+:root{
+--cor00: #c5ebd6;
+--cor01: #82e1ad;
+--cor02: #3ddc84;
+--cor03: #2fa866;
+--cor04: #1a5c37;
+--cor05: #063d1e;
+
+--fonte-padrao: Arial, Verdana, Helvetica, Sans serif;
+--fonte-destaque: "Bebas Neue", sans-serif;
+--fonte-android: 'Android', cursive;
+
+/*a tag root é onde DEVEMOS criar e deixar nossas variaveis em CSS. O seguinte padrão para adcionar uma Variavel --(nome da variavel):;*/
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor00);
+    font-family: var(--fonte-padrao);
+}
+
+header{
+
+    color: white;
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor05));
+    min-height: 150px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    text-shadow: 0px 0px 05px rgb(0, 255, 55);
+    
+}
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 10px;
+}
+header > p{
+    font-family: var(--fonte-padrao);
+    text-shadow: 0px 0px 05px rgb(0, 255, 55);
+    width: 400px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+nav{
+    background-color: var(--cor05);
+    padding: 10px;
+    text-align: center;
+}
+nav > a{
+    color: #c5ebd6;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    /*font-weight usado para definir a intensidade do negrito*/
+    transition-duration: .5s;
+}
+nav > a:hover{
+    background-color: var(--cor02);
+    color: black;
+
+
+}
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+    margin: auto;
+    background-color: white;
+    margin-bottom: 30px; 
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+}
+main img{
+    width: 100%;
+}
+main img.pequena{
+    width: 350px;
+    margin: auto;
+    display: block;
+    /*Display block serve para categorizar uma imagen como um bloco (sem isso não conseguimos centralizar)*/
+}
+div.video{
+    background-color: #82e1ad;
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+main h1{
+    color: var(--cor05);
+    font-family: var(--fonte-android);
+}
+main h2{
+    font-family: var(--fonte-android);
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, var(--cor01),transparent);
+    text-indent: 8px;
+}
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    /*line-height serve para definir o espaço entre as linhas de texto. obs: otimo para artigos longos afim que o leitor não se perda*/
+}
+main strong{
+   color: black;
+   font-weight: bolder;
+}
+main a{
+    color: #063d1e;
+    background-color: #3ddc84;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+main a:hover{
+    background-color: #82e1ad;
+    text-decoration: underline;
+}
+aside{
+    background-color: var(--cor02);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5  px rgba(0, 0, 0, 0.322);
+}
+aside h3{
+    color: white;
+    background-color: #1a5c37;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 5px 5px 0px 0px;
+}
+aside > ul{
+    list-style-position: inside;
+    list-style-type: '\2714\00A0';
+    columns: 2;
+    /*list-style-type: serve para adicionar um emoji na lista. OBS: emoji usado tirado da Emojipedia, só ir lá escolher e copiar o código, 00A0 é para dar um espaçamento entre o emoji e o conteúdo*/
+}
+footer{
+    background-color: var(--cor03);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a{
+    color: gray;
+    text-decoration: none;
+    font-weight: bolder;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor00);
+}
